@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-encre);
+  font-family: var(--police-texte);
+  font-size: var(--taille-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--couleur-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--police-titres);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--espace-4) 0;
+  color: var(--couleur-encre);
+}
+
+h1 {
+  font-size: var(--taille-2xl);
+}
+
+h2 {
+  font-size: var(--taille-xl);
+}
+
+h3 {
+  font-size: var(--taille-lg);
+}
+
+p {
+  margin: 0 0 var(--espace-4) 0;
+  max-width: 68ch;
+}
+
+/* Focus clavier visible partout : accessibilité non négociable */
+:focus-visible {
+  outline: 2px solid var(--couleur-accent);
+  outline-offset: 2px;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin: 0 auto;
+  padding: 0 var(--espace-6);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenu-principal {
+  flex: 1;
+  padding: var(--espace-12) 0 var(--espace-16);
+}
+
+@media (max-width: 640px) {
+  .conteneur {
+    padding: 0 var(--espace-4);
+  }
+
+  .contenu-principal {
+    padding: var(--espace-8) 0 var(--espace-12);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

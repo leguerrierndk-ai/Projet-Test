@@ -1,0 +1,332 @@
+/* ===== Header ===== */
+
+.entete {
+  border-bottom: 1px solid var(--couleur-bordure);
+  background-color: var(--couleur-fond-carte);
+}
+
+.entete-barre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espace-4);
+  padding: var(--espace-4) 0;
+  flex-wrap: wrap;
+}
+
+.entete-logo {
+  font-family: var(--police-titres);
+  font-size: var(--taille-lg);
+  font-weight: 600;
+  color: var(--couleur-encre);
+}
+
+.entete-logo:hover {
+  text-decoration: none;
+  color: var(--couleur-accent);
+}
+
+.entete-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-3);
+}
+
+.statut-connexion {
+  font-size: var(--taille-sm);
+  color: var(--couleur-encre-douce);
+}
+
+/* ===== Boutons ===== */
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espace-2);
+  font-family: var(--police-texte);
+  font-size: var(--taille-sm);
+  font-weight: 500;
+  padding: var(--espace-3) var(--espace-6);
+  border-radius: var(--rayon-bordure);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--duree-transition) ease,
+    border-color var(--duree-transition) ease,
+    opacity var(--duree-transition) ease;
+}
+
+.bouton-principal {
+  background-color: var(--couleur-accent);
+  color: #FFFFFF;
+}
+
+.bouton-principal:hover {
+  background-color: var(--couleur-accent-clair);
+  text-decoration: none;
+}
+
+.bouton-secondaire {
+  background-color: transparent;
+  border-color: var(--couleur-encre);
+  color: var(--couleur-encre);
+}
+
+.bouton-secondaire:hover {
+  background-color: var(--couleur-encre);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.bouton-danger {
+  background-color: transparent;
+  border-color: var(--couleur-alerte);
+  color: var(--couleur-alerte);
+}
+
+.bouton-danger:hover {
+  background-color: var(--couleur-alerte);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.bouton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.bouton-pleine-largeur {
+  width: 100%;
+}
+
+/* ===== Formulaires ===== */
+
+.champ {
+  margin-bottom: var(--espace-4);
+}
+
+.champ label {
+  display: block;
+  font-size: var(--taille-sm);
+  font-weight: 500;
+  margin-bottom: var(--espace-2);
+}
+
+.champ input,
+.champ textarea {
+  width: 100%;
+  font-family: var(--police-texte);
+  font-size: var(--taille-base);
+  padding: var(--espace-3);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-bordure);
+  background-color: #FFFFFF;
+  color: var(--couleur-encre);
+}
+
+.champ input:focus,
+.champ textarea:focus {
+  outline: 2px solid var(--couleur-accent);
+  outline-offset: 1px;
+  border-color: var(--couleur-accent);
+}
+
+.champ textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.formulaire {
+  max-width: 26rem;
+}
+
+.formulaire-large {
+  max-width: 36rem;
+}
+
+/* ===== Messages d'état ===== */
+
+.message {
+  padding: var(--espace-3) var(--espace-4);
+  border-radius: var(--rayon-bordure);
+  font-size: var(--taille-sm);
+  margin-bottom: var(--espace-4);
+}
+
+.message-erreur {
+  background-color: var(--couleur-erreur-fond);
+  color: var(--couleur-erreur);
+  border: 1px solid var(--couleur-erreur);
+}
+
+.message-succes {
+  background-color: var(--couleur-fond-carte);
+  color: var(--couleur-succes);
+  border: 1px solid var(--couleur-succes);
+}
+
+.message-info {
+  background-color: var(--couleur-alerte-fond);
+  color: var(--couleur-alerte);
+  border: 1px solid var(--couleur-alerte);
+}
+
+/* ===== Cartes article ===== */
+
+.grille-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--espace-6);
+}
+
+.carte-article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--couleur-fond-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-bordure);
+  overflow: hidden;
+  transition: border-color var(--duree-transition) ease;
+}
+
+.carte-article:hover {
+  border-color: var(--couleur-accent);
+  text-decoration: none;
+}
+
+.carte-article-image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: var(--couleur-bordure);
+}
+
+.carte-article-corps {
+  padding: var(--espace-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-2);
+}
+
+.carte-article-titre {
+  font-family: var(--police-titres);
+  font-size: var(--taille-lg);
+  color: var(--couleur-encre);
+  margin: 0;
+}
+
+.carte-article-prix {
+  font-weight: 600;
+  color: var(--couleur-accent);
+}
+
+.carte-article-likes {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-1);
+  font-size: var(--taille-xs);
+  color: var(--couleur-encre-douce);
+  margin-top: auto;
+}
+
+/* ===== Page de détail d'un article ===== */
+
+.detail-article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--espace-8);
+  margin-bottom: var(--espace-12);
+}
+
+.detail-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--rayon-bordure);
+  border: 1px solid var(--couleur-bordure);
+}
+
+.detail-prix {
+  font-family: var(--police-titres);
+  font-size: var(--taille-xl);
+  color: var(--couleur-accent);
+  margin-bottom: var(--espace-4);
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-3);
+  margin-top: var(--espace-6);
+}
+
+.bouton-like {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espace-2);
+  background-color: transparent;
+  border: 1px solid var(--couleur-bordure);
+  color: var(--couleur-encre);
+  padding: var(--espace-3) var(--espace-6);
+  border-radius: var(--rayon-bordure);
+  font-size: var(--taille-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--duree-transition) ease, color var(--duree-transition) ease;
+}
+
+.bouton-like:hover {
+  border-color: var(--couleur-alerte);
+}
+
+.bouton-like.actif {
+  border-color: var(--couleur-alerte);
+  color: var(--couleur-alerte);
+}
+
+@media (max-width: 720px) {
+  .detail-article {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Avis ===== */
+
+.section-avis {
+  border-top: 1px solid var(--couleur-bordure);
+  padding-top: var(--espace-8);
+}
+
+.liste-avis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-4);
+  margin-bottom: var(--espace-8);
+}
+
+.avis-item {
+  background-color: var(--couleur-fond-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-bordure);
+  padding: var(--espace-4);
+}
+
+.avis-note {
+  color: var(--couleur-alerte);
+  font-size: var(--taille-sm);
+  letter-spacing: 1px;
+}
+
+.avis-commentaire {
+  margin: var(--espace-2) 0 0 0;
+}
+
+/* ===== Indicateur de chargement ===== */
+
+.chargement {
+  color: var(--couleur-encre-douce);
+  font-size: var(--taille-sm);
+  padding: var(--espace-8) 0;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de l'article - Stuff</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/composants.css">
+</head>
+<body>
+    <div class="page">
+        <header id="entete" class="entete"></header>
+
+        <main class="contenu-principal">
+            <div class="conteneur">
+                <p><a href="index.html">&larr; Retour aux articles</a></p>
+
+                <div id="zone-detail">
+                    <p class="chargement">Chargement de l'article…</p>
+                </div>
+
+                <section class="section-avis">
+                    <h2>Avis</h2>
+                    <div id="liste-avis" class="liste-avis">
+                        <p class="chargement">Chargement des avis…</p>
+                    </div>
+                    <div id="zone-formulaire-avis"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import { afficherEntete } from "./js/header.js";
+        import { initialiserDetail } from "./js/detail.js";
+
+        afficherEntete();
+        initialiserDetail();
+    </script>
+</body>
+</html>

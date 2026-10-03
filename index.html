@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuff catalogue</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/composants.css">
+</head>
+<body>
+    <div class="page">
+        <header id="entete" class="entete"></header>
+
+        <main class="contenu-principal">
+            <div class="conteneur">
+                <h1>Les articles disponibles</h1>
+                <p>Vends ce qui ne te sert plus, trouve ce dont tu as besoin.</p>
+
+                <div id="zone-articles">
+                    <p class="chargement">Chargement des articles à l'étape suivante…</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import { afficherEntete } from "./js/header.js";
+        import { initialiserAccueil } from "./js/accueil.js";
+
+        afficherEntete();
+        initialiserAccueil();
+    </script>
+</body>
+</html>

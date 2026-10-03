@@ -1,0 +1,48 @@
+/*
+  Design system — "Stuff"
+  Direction : marché de seconde main, chaleureux et tactile.
+  Papier légèrement grisé, encre profonde, vert bouteille en accent principal,
+  orange brique réservé aux actions fortes (like actif, suppression).
+*/
+
+:root {
+  /* Couleurs */
+  --couleur-fond: #EDEAE3;
+  --couleur-fond-carte: #F7F5F0;
+  --couleur-encre: #20221F;
+  --couleur-encre-douce: #55564F;
+  --couleur-bordure: #D8D3C7;
+  --couleur-accent: #33513F;
+  --couleur-accent-clair: #4A6E56;
+  --couleur-alerte: #C4622D;
+  --couleur-alerte-fond: #F5E3D8;
+  --couleur-succes: #33513F;
+  --couleur-erreur: #A63D2A;
+  --couleur-erreur-fond: #F7E2DC;
+
+  /* Typographie */
+  --police-titres: "Fraunces", Georgia, serif;
+  --police-texte: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --taille-xs: 0.8125rem;
+  --taille-sm: 0.9375rem;
+  --taille-base: 1rem;
+  --taille-lg: 1.25rem;
+  --taille-xl: 1.75rem;
+  --taille-2xl: 2.5rem;
+
+  /* Espacements */
+  --espace-1: 0.25rem;
+  --espace-2: 0.5rem;
+  --espace-3: 0.75rem;
+  --espace-4: 1rem;
+  --espace-6: 1.5rem;
+  --espace-8: 2rem;
+  --espace-12: 3rem;
+  --espace-16: 4rem;
+
+  /* Divers */
+  --rayon-bordure: 3px;
+  --largeur-contenu: 72rem;
+  --duree-transition: 0.15s;
+}
